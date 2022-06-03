@@ -1,9 +1,12 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { AxiosService } from './axios.service';
 import { CreateAxioDto } from './dto/create-axio.dto';
 import { UpdateAxioDto } from './dto/update-axio.dto';
 
+
 @Controller('axios')
+@ApiTags("AXIOS")
 export class AxiosController {
   constructor(private readonly axiosService: AxiosService) {}
 

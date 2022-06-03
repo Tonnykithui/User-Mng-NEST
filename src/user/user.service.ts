@@ -82,7 +82,7 @@ export class UserService {
     return newUser;
   }
 
-  @Cron('45 * * * * *')
+  @Cron('30 57 11 * * *')
   async getUserBdayNotify(){
     const users = await this.findAll();
     users.forEach((user) => {
